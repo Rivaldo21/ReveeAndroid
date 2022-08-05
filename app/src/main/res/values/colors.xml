@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="purple_500">#065C54</color>
+    <color name="purple_700">#065C54</color>
+    <color name="teal_200">#FFC107</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="silver">#A1A1A1</color>
+
+    <!--normal colors-->
+    <color name="darkTextColor">#020000</color>
+
+    <!--colors for light mode-->
+    <color name="contentTextColor">#020000</color>
+    <color name="register_bk_color">#FFFFFF</color>
+    <color name="login_bk_color">#095C54</color>
+    <color name="whiteTextColor">#054E47</color>
+    <color name="primaryTextColor">#11CFC5</color>
+
+    <!--colors for slide screen-->
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorSecondaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bg_mainactivity">#d4e6e3</color>
+    <!-- Screens background color-->
+    <color name="bg_screen1">#16c266</color>
+    <color name="bg_screen2">#90c2bb</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#39d1ba</color>
+    <color name="dot_dark_screen2">#14a895</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#8de7f9</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="colorGrey">#BBBBBB</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+    </array>
+</resources>

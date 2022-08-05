@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable-v24/custom_button_register.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.21875" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable-v24/white_grey_border_top.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/add.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/custom_button.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/custom_text.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/ic_delete_white.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/ic_email_white.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/ic_facebook.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/ic_google.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21875" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/ic_notif_white.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/ic_notification.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/ic_password.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/drawable/ic_register_hera.xml" value="0.37864583333333335" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/acount_id.xml" value="0.3625" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/activity_calendar.xml" value="0.1" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/activity_dashboard.xml" value="0.3625" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/activity_one.xml" value="0.25" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/activity_profile.xml" value="0.33" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/activity_signin.xml" value="0.33" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/activity_singup.xml" value="0.25" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/activity_splash.xml" value="0.3625" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/activity_two.xml" value="0.25" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/adapter_diary.xml" value="0.33" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/add_diary.xml" value="0.3625" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/edit_diary.xml" value="0.2740740740740741" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/welcome_activity.xml" value="0.33" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/welcome_activity1.xml" value="0.3625" />
+        <entry key="..\:/DiaryApp/app/src/main/res/layout/welcome_activity2.xml" value="0.3625" />
+        <entry key="..\:/DiaryApp/app/src/main/res/menu/button_navigation.xml" value="0.3625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
