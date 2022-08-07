@@ -33,18 +33,18 @@
                 app:cardElevation="10dp">
 
                 <ImageView
-                    android:id="@+id/icon_map"
+                    android:id="@+id/calendar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
-                    android:src="@drawable/ic_map" />
+                    android:src="@drawable/ic_calendar" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="42sp"
                     android:layout_marginTop="14sp"
-                    android:text="Becora, Dili Nain Feto"
+                    android:text="Data Konsulta 25/08/2022"
                     android:textSize="16sp" />
 
                 <View
@@ -56,19 +56,19 @@
                     android:background="#EAEAEA" />
 
                 <ImageView
-                    android:id="@+id/icon_calendar"
+                    android:id="@+id/map"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="63dp"
-                    android:src="@drawable/ic_calendar" />
+                    android:src="@drawable/ic_map" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="42sp"
                     android:layout_marginTop="62dp"
-                    android:text="16/7/2022"
+                    android:text="Klinika Becora, Dili, Nain Feto"
                     android:textSize="16sp" />
 
             </androidx.cardview.widget.CardView>

@@ -108,13 +108,13 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
             }
         };
 
-        Timer timer = new Timer();
-        timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                handler.post(update);
-            }
-        },2500,2500);
+    Timer timer = new Timer();
+    timer.schedule(new TimerTask() {
+        @Override
+        public void run() {
+            handler.post(update);
+        }
+    },2500,2500);
 
     BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById( R.id.bottomNavView_Bar );
     BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
@@ -147,5 +147,10 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
             return false;
         }
         } );
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_notification, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 }
