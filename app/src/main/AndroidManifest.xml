@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DiaryApp">
         <activity
+            android:name=".MarkaActivity"
+            android:exported="false" />
+        <activity
             android:name=".CategoryActivity"
             android:exported="false" />
         <activity
