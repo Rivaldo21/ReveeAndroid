@@ -13,7 +13,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="130dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -27,7 +27,7 @@
                 android:layout_width="320dp"
                 android:layout_height="100dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:outlineSpotShadowColor="#03A9F4"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="10dp">
@@ -73,12 +73,6 @@
 
             </androidx.cardview.widget.CardView>
 
-            <!--Orienta ba RecycleView Content-->
-<!--            <androidx.recyclerview.widget.RecyclerView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_marginTop="1950dp" />-->
-
         </RelativeLayout>
 
         <RelativeLayout
@@ -87,7 +81,7 @@
             android:layout_width="300dp"
             android:layout_height="120dp">
 
-            <include layout="@layout/slide_resource"/>
+            <include layout="@layout/slide_resource" />
 
         </RelativeLayout>
 
