@@ -33,15 +33,15 @@ public class CategoryActivity extends AppCompatActivity {
     private void gridItemShow() {
         arrayList = new ArrayList<Pojo>();
 
-        arrayList.add(new Pojo("Fokit Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_12));
-        arrayList.add(new Pojo("Hamos Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_13));
-        arrayList.add(new Pojo("Aumenta Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_14));
-        arrayList.add(new Pojo("Solda Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_15));
-        arrayList.add(new Pojo("Solda Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_15));
-        arrayList.add(new Pojo("Solda Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_15));
-        arrayList.add(new Pojo("Solda Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_15));
-        arrayList.add(new Pojo("Solda Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_15));
-        arrayList.add(new Pojo("Solda Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_15));
-        arrayList.add(new Pojo("Solda Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_15));
+        arrayList.add(new Pojo("Losu Nehan", "", R.drawable.ic_12));
+        arrayList.add(new Pojo("Taka Nehan", "", R.drawable.ic_13));
+        arrayList.add(new Pojo("Hamos Nehan", "", R.drawable.ic_14));
+        arrayList.add(new Pojo("Solda Nehan", "", R.drawable.ic_15));
+        arrayList.add(new Pojo("Scaling Nehan", "", R.drawable.ic_15));
+        arrayList.add(new Pojo("Bleaching", "", R.drawable.ic_15));
+        arrayList.add(new Pojo("Filling", "", R.drawable.ic_15));
+        arrayList.add(new Pojo("Inplan Nehan", "", R.drawable.ic_15));
+        arrayList.add(new Pojo("Endodontik", "", R.drawable.ic_15));
+        arrayList.add(new Pojo("Crown Nehan", "", R.drawable.ic_15));
     }
 }

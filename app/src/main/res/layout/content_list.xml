@@ -9,7 +9,7 @@
         android:layout_gravity="center"
         android:layout_margin="7dp"
         app:cardCornerRadius="5dp"
-        app:cardElevation="3dp"
+        app:cardElevation="2dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -38,7 +38,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Venom : Let There Be Canarge"
-                    android:textSize="18sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
                 <TextView
