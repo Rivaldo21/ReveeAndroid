@@ -3,7 +3,7 @@ package com.diary.klinikapp;
 public class ContentItem {
 
     static int[] poster = {
-            R.drawable.new_poster_1, R.drawable.new_poster_2, R.drawable.new_poster_3, R.drawable.new_poster_4, R.drawable.new_poster_5,
+            R.drawable.posterone, R.drawable.postertwo, R.drawable.posterthree, R.drawable.posterfour, R.drawable.posterfive, R.drawable.six,
 
     };
 

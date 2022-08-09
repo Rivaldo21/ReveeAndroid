@@ -33,6 +33,9 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
     ViewPager viewPager;
     int[] images = {R.drawable.two, R.drawable.three, R.drawable.one};
     int currentPageCunter = 0;
+    MenuItem menuItem;
+    TextView badgeCounter;
+    int pendingNotfication = 12;
     ArrayList<Pojo> arrayList;
     GridView gridView;
     TextView textView;
@@ -151,6 +154,16 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_notification, menu);
+        menuItem = menu.findItem(R.id.nav_notification);
+        badgeCounter = findViewById(R.id.badge_counter);
+        if (pendingNotfication == 0){
+            menuItem.setActionView(null);
+        } else {
+            menuItem.setActionView(R.layout.notification_badge);
+            View view = menuItem.getActionView();
+            badgeCounter = view.findViewById(R.id.badge_counter);
+            badgeCounter.setText(String.valueOf(pendingNotfication));
+        }
         return super.onCreateOptionsMenu(menu);
     }
 }
