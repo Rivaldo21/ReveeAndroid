@@ -50,7 +50,7 @@ public class Signin extends AppCompatActivity {
         binding.singup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(Signin.this, Singup.class));
+                startActivity(new Intent(Signin.this, Singup.class));
             }
         });
     }

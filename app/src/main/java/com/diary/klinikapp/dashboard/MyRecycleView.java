@@ -17,7 +17,7 @@ import java.util.ArrayList;
 /*Show to profile*/
 public class MyRecycleView extends RecyclerView.Adapter<MyRecycleView.ViewHolder> {
 
-    private ArrayList<ItemModel> dataItem;
+    private final ArrayList<ItemModel> dataItem;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 

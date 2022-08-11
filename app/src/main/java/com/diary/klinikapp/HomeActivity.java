@@ -1,20 +1,25 @@
 package com.diary.klinikapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import com.diary.klinikapp.dashboard.BottomNavigationViewHelper;
@@ -45,11 +50,31 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
     RecyclerView.Adapter recycleViewAdapter;
     RecyclerView.LayoutManager layoutManager;
     ArrayList<ContentModel> dataItem;
+    View dialog1;
+    AutoCompleteTextView autoCompleteTextView1;
+    String[] nameList = {"Dili Klinika Becora", "Dili Klinika Bidau","Dili Klinika Fatuhada", "Baucau",
+            "Viqueque", "Ainaro", "Suai", "Manatuto", "Liquica","Oecusse","Atauro", "Same",};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        autoCompleteTextView1 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView);
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, nameList);
+        autoCompleteTextView1.setThreshold(1);
+        autoCompleteTextView1.setAdapter(adapter);
+
+        final SwipeRefreshLayout refreshLayout = findViewById(R.id.refresh_layout);
+        refreshLayout.setColorSchemeColors(Color.BLUE);
+
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                Toast.makeText(HomeActivity.this, "Atualiza fali", Toast.LENGTH_SHORT).show();
+                refreshLayout.setRefreshing(false);
+            }
+        });
 
         TextView see_all = findViewById(R.id.see_all);
 

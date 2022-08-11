@@ -4,6 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.diary.klinikapp.HomeActivity;
 import com.diary.klinikapp.R;
+import com.diary.klinikapp.Signin;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -22,6 +27,7 @@ import java.util.ArrayList;
 public class Profile extends AppCompatActivity {
 
     RecyclerView recyclerView;
+    Button btn1;
     RecyclerView.Adapter recycleViewAdapter;
     RecyclerView.LayoutManager recycleViewLayoutManager;
     ArrayList<ItemModel> data;
@@ -33,6 +39,17 @@ public class Profile extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recycleView);
         recyclerView.setHasFixedSize(true);
+
+        final TextView txtView = (TextView) findViewById(R.id.tvView);
+
+        txtView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Profile.this, "Sai husi perfil", Toast.LENGTH_SHORT).show();
+                Intent myIntent = new Intent(txtView.getContext(),Signin.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
 
         recycleViewLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(recycleViewLayoutManager);

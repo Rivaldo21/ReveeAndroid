@@ -7,6 +7,7 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.diary.klinikapp.HomeActivity;
@@ -22,7 +23,8 @@ public class MedicineRecord extends AppCompatActivity {
 
         overridePendingTransition(0,0);
 
-        getSupportActionBar().setTitle("Rejistu Mediku");
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.mediku_toolbar);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById( R.id.bottomNavView_Bar );
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);

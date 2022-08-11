@@ -63,12 +63,14 @@
                     android:layout_marginTop="63dp"
                     android:src="@drawable/ic_map" />
 
-                <TextView
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="42sp"
-                    android:layout_marginTop="62dp"
-                    android:text="Klinika Becora, Dili, Nain Feto"
+                    android:layout_marginTop="50dp"
+                    android:textColor="@color/black"
+                    android:hint="Klinika Becora, Dili, Nain Feto"
                     android:textSize="16sp" />
 
             </androidx.cardview.widget.CardView>

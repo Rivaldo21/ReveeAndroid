@@ -9,13 +9,13 @@ public class ContentItem {
     };
 
     static String[] judul = {
-            "Sentru Ajuda", "Konaba Ami", "Metode Pagamentu", "Informasaun Klinika", "Termu & Kondisaun","Termu & Kondisaun",
+             "Sentru Ajuda", "Konaba Ami", "Metode Pagamentu", "Informasaun Klinika", "Termu & Kondisaun","Termu & Kondisaun",
             "Termu & Kondisaun","Termu & Kondisaun","Termu & Kondisaun","Termu & Kondisaun","Termu & Kondisaun","Termu & Kondisaun",
 
     };
 
     static String[] tahun = {
-            "Metode Pagamento", "Konaba", "Mensajen",
+            String.valueOf(R.string.slide_1_title), String.valueOf(R.string.app_name), String.valueOf(R.string.app_name), "Mensajen",
             "Informasaun", "Sentru Ajuda",
             "Horario Klinika","Horario Klinika","Horario Klinika","Horario Klinika","Horario Klinika","Horario Klinika",
             "Horario Klinika",
