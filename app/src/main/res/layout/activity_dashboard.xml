@@ -3,115 +3,76 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    xmlns:attv="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1655dp">
+        android:layout_height="wrap_content">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp">
+            android:layout_height="70dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="30dp"
                 android:background="@drawable/home_background">
 
             </RelativeLayout>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="320dp"
-                android:layout_height="100dp"
+                android:layout_width="330dp"
+                android:layout_height="60dp"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"
-                android:outlineSpotShadowColor="#03A9F4"
+                android:layout_marginTop="5dp"
+                android:outlineSpotShadowColor="#00BCD4"
                 app:cardCornerRadius="10dp"
-                app:cardElevation="10dp">
+                app:cardElevation="5dp">
 
                 <ImageView
-                    android:id="@+id/calendar"
+                    android:id="@+id/search"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:src="@drawable/ic_calendar" />
+                    android:layout_margin="20dp"
+                    android:src="@drawable/ic_search" />
 
-                <TextView
+                <EditText
+                    android:hint="Buka saida?"
+                    android:fontFamily="@font/poppins"
+                    android:layout_width="230dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="50dp"
+                    android:background="@null">
+
+                </EditText>
+
+                <RelativeLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="42sp"
-                    android:layout_marginTop="14sp"
-                    android:text="Data Konsulta 25/08/2022"
-                    android:textSize="16sp" />
+                    android:layout_height="match_parent">
 
-                <View
-                    android:id="@+id/lineView"
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
-                    android:background="#EAEAEA" />
+                    <ImageView
+                        android:id="@+id/mic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:src="@drawable/ic_scanner" />
 
-                <ImageView
-                    android:id="@+id/map"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="63dp"
-                    android:src="@drawable/ic_map" />
+                </RelativeLayout>
 
-                <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="42sp"
-                    android:layout_marginTop="50dp"
-                    android:textColor="@color/black"
-                    android:hint="Klinika Becora, Dili, Nain Feto"
-                    android:textSize="16sp" />
 
             </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="130dp"
-            android:layout_width="300dp"
-            android:layout_height="120dp">
-
-            <include layout="@layout/slide_resource" />
-
-        </RelativeLayout>
-
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_marginTop="270dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:text="TRATAMENTU"
-                android:textStyle="bold"
-                android:layout_marginStart="30dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-            <TextView
-                android:id="@+id/see_all"
-                android:text="Haree hotu"
-                android:textColor="#033FF4"
-                android:layout_marginLeft="130dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="150dp">
 
@@ -119,22 +80,49 @@
 
         </LinearLayout>
 
+        <RelativeLayout
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="210dp"
+            android:layout_width="300dp"
+            android:layout_height="130dp">
+
+            <include layout="@layout/slide_resource" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="250dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="4dp"
             android:layout_gravity="center"
-            android:layout_marginTop="450dp"
+            android:layout_marginTop="370dp"
             android:background="#EAEAEA" />
 
+        <!--for content home-->
         <LinearLayout
             android:orientation="vertical"
-            android:layout_marginTop="480dp"
+            android:layout_marginTop="400dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <include layout="@layout/activity_content"/>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="#EAEAEA" />
+
         </LinearLayout>
+        <!--for content home-end-->
 
         <RelativeLayout
             android:layout_marginTop="250dp"

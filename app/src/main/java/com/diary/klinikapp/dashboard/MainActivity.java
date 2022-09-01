@@ -22,43 +22,40 @@ public class MainActivity extends AppCompatActivity {
 
         overridePendingTransition(0, 0);
 
-//        TextView title = (TextView) findViewById(R.id.activityTitle1);
-//        title.setText("This is ActivityOne");
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(0);
+        menuItem.setChecked(true);
 
-            BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
-            BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
-            Menu menu = bottomNavigationView.getMenu();
-            MenuItem menuItem = menu.getItem(0);
-            menuItem.setChecked(true);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.ic_home:
+                        Intent intent0 = new Intent(MainActivity.this, Dashboard.class);
+                        startActivity(intent0);
+                        break;
 
-            bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                    switch (item.getItemId()) {
-                        case R.id.ic_home:
-                            Intent intent0 = new Intent(MainActivity.this, Dashboard.class);
-                            startActivity(intent0);
-                            break;
+                    case R.id.ic_blog:
+                        Intent intent1 = new Intent(MainActivity.this, Blog.class);
+                        startActivity(intent1);
+                        break;
 
-                        case R.id.ic_history:
-                            Intent intent1 = new Intent(MainActivity.this, History.class);
-                            startActivity(intent1);
-                            break;
+                    case R.id.ic_favoritu:
+                        Intent intent2 = new Intent(MainActivity.this, Favoritu.class);
+                        startActivity(intent2);
+                        break;
 
-                        case R.id.ic_calendar:
-                            Intent intent2 = new Intent(MainActivity.this, MedicineRecord.class);
-                            startActivity(intent2);
-                            break;
+                    case R.id.ic_profile:
+                        Intent intent3 = new Intent(MainActivity.this, Profile.class);
+                        startActivity(intent3);
+                        break;
 
-                        case R.id.ic_profile:
-                            Intent intent3 = new Intent(MainActivity.this, Profile.class);
-                            startActivity(intent3);
-                            break;
-
-                    }
-
-                    return false;
                 }
-            });
-        }
+
+                return false;
+            }
+        });
     }
+}

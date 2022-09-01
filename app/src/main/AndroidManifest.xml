@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.diary.klinikapp">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -9,6 +8,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DiaryApp">
+        <activity
+            android:name=".DetailActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Grid_itemActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".MarkaActivity"
             android:exported="false" />
@@ -37,8 +50,8 @@
         <activity android:name=".Singup" />
         <activity android:name=".dashboard.Dashboard" />
         <activity android:name=".dashboard.MainActivity" />
-        <activity android:name=".dashboard.History" />
-        <activity android:name=".dashboard.MedicineRecord" />
+        <activity android:name=".dashboard.Blog" />
+        <activity android:name=".dashboard.Favoritu" />
         <activity android:name=".dashboard.Profile" />
 
         <meta-data

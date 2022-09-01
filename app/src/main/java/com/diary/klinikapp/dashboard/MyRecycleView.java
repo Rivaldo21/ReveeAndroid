@@ -12,8 +12,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.diary.klinikapp.R;
 
 import java.util.ArrayList;
-
-
 /*Show to profile*/
 public class MyRecycleView extends RecyclerView.Adapter<MyRecycleView.ViewHolder> {
 
@@ -29,8 +27,8 @@ public class MyRecycleView extends RecyclerView.Adapter<MyRecycleView.ViewHolder
             super(itemView);
 
             txtHead = itemView.findViewById(R.id.text_title1);
-            txtSubhead = itemView.findViewById(R.id.text_subtitle1);
-            imageIcon = itemView.findViewById(R.id.image1);
+            /*txtSubhead = itemView.findViewById(R.id.text_subtitle1);
+            imageIcon = itemView.findViewById(R.id.image1);*/
         }
     }
 
@@ -55,8 +53,8 @@ public class MyRecycleView extends RecyclerView.Adapter<MyRecycleView.ViewHolder
         ImageView imageIcon = holder.imageIcon;
 
         txtHead.setText(dataItem.get(position).getName());
-        txtSubhead.setText(dataItem.get(position).getType());
-        imageIcon.setImageResource(dataItem.get(position).getImage());
+        /*txtSubhead.setText(dataItem.get(position).getType());
+        imageIcon.setImageResource(dataItem.get(position).getImage());*/
     }
 
     @Override

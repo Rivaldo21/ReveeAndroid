@@ -14,12 +14,12 @@
         android:background="@color/white"
         android:layout_height="wrap_content">
 
-        <ImageView
+<!--        <ImageView
             android:id="@+id/image1"
             android:src="@drawable/ic_mediku"
             android:layout_margin="8dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"/>-->
 
     <LinearLayout
         android:id="@+id/imagelist"
@@ -31,23 +31,24 @@
 
         <TextView
             android:id="@+id/text_title1"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:text="Metode Pagamentu"
+            android:fontFamily="@font/poppins"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
-        <TextView
+<!--        <TextView
             android:id="@+id/text_subtitle1"
             android:textSize="15dp"
             android:text="Salva Metode Pagamentu"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"/>-->
 
     </LinearLayout>
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_gravity="center_vertical"
         android:layout_margin="5dp"
         app:srcCompat="@drawable/ic_arrow_right" />

@@ -27,8 +27,13 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="Widget.BottomNavigationView"
+        parent="Widget.Design.BottomNavigationView">
+        <item name="fontFamily">@font/poppins</item>
+    </style>
+
     <style name="viewParent.headerText.NoMode">
-        <item name="android:textColor">@color/darkTextColor</item>
+        <item name="android:textColor">#FFFFFF</item>
     </style>
 
     <style name="parent">

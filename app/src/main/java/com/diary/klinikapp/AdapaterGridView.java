@@ -48,12 +48,12 @@ public class AdapaterGridView extends BaseAdapter {
         imageView.setImageResource(gridViewPojos.get(position).getImage());
         textView.setText(gridViewPojos.get(position).getName());
 
-//        convertView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(context, ""+gridViewPojos.get(position).getName(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        convertView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, ""+gridViewPojos.get(position).getName(), Toast.LENGTH_SHORT).show();
+            }
+        });
 
         return convertView;
     }

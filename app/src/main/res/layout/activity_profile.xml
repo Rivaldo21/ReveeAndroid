@@ -1,85 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:layout_centerHorizontal="true"
+            android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:id="@+id/topBar">
+            app:cardElevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/profile_background">
 
             <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/profileR"
                 android:src="@drawable/ic_dov"
                 android:elevation="5dp"
-                android:layout_marginTop="50dp"
-                android:layout_centerHorizontal="true"
-                android:layout_width="100dp"
-                android:layout_height="100dp"/>
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="30dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"/>
 
-            <com.google.android.material.appbar.AppBarLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/username"
+                android:layout_marginLeft="120dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#03A9F4">
+                android:layout_marginTop="20sp"
+                android:padding="5dp"
+                android:text="Melania Amaral"
+                android:fontFamily="@font/poppinsbold"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
 
-                <RelativeLayout
-                    android:background="@drawable/profile_background"
-                    android:layout_marginTop="100dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginLeft="124dp"
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username">
 
-                    <TextView
-                        android:id="@+id/username"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="60sp"
-                        android:padding="5dp"
-                        android:text="Doviana Granadeiro"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/numregist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="No Registu : " />
 
-                        <LinearLayout
-                            android:layout_centerInParent="true"
-                            android:layout_below="@id/username"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/nrejistu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_alignRight="@id/numregist"
+                    android:text="001"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
 
-                            <TextView
-                                android:id="@+id/numregist"
-                                android:text="No Registu : "
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+            </LinearLayout>
 
-                            <TextView
-                                android:id="@+id/nrejistu"
-                                android:text="001"
-                                android:textStyle="bold"
-                                android:textColor="@color/black"
-                                android:layout_alignRight="@id/numregist"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="100dp"
+                android:background="#EAEAEA" />
 
-                        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="4dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="130dp"
-                        android:background="#EAEAEA" />
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/topBar">-->
 
-                </RelativeLayout>
+<!--            <com.google.android.material.appbar.AppBarLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/white">-->
+<!--            </com.google.android.material.appbar.AppBarLayout>-->
 
-            </com.google.android.material.appbar.AppBarLayout>
-
-        </RelativeLayout>
+<!--        </RelativeLayout>-->
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -93,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="250dp"
+                android:layout_marginTop="170dp"
                 android:layout_marginRight="10dp" />
 
         </ScrollView>
@@ -105,10 +111,13 @@
             android:layout_below="@id/scrollView"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:text="Logout"
+            android:fontFamily="@font/poppinsbold"
+            android:textSize="16sp"
+            android:textStyle="bold"
             android:textColor="#EF0000" />
 
         <RelativeLayout
@@ -120,16 +129,18 @@
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomNavView_Bar"
                 android:layout_width="match_parent"
-                android:layout_margin="15dp"
                 app:elevation="3dp"
+                app:itemTextColor="@color/black"
+                app:itemIconSize="22dp"
+                app:itemTextAppearanceInactive="@style/Widget.BottomNavigationView"
                 android:layout_height="?attr/actionBarSize"
                 app:labelVisibilityMode="labeled"
                 android:background="@drawable/background_button"
                 app:menu="@menu/button_navigation">
-
             </com.google.android.material.bottomnavigation.BottomNavigationView>
+
         </RelativeLayout>
 
     </RelativeLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

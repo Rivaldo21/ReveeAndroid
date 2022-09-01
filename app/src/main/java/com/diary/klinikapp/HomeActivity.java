@@ -8,10 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
+import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,8 +26,8 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.diary.klinikapp.dashboard.BottomNavigationViewHelper;
 import com.diary.klinikapp.dashboard.ContentRecycleView;
-import com.diary.klinikapp.dashboard.History;
-import com.diary.klinikapp.dashboard.MedicineRecord;
+import com.diary.klinikapp.dashboard.Blog;
+import com.diary.klinikapp.dashboard.Favoritu;
 import com.diary.klinikapp.dashboard.Profile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -36,13 +38,16 @@ import java.util.TimerTask;
 public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
 
     ViewPager viewPager;
-    int[] images = {R.drawable.two, R.drawable.three, R.drawable.one};
+    int[] images = {R.drawable.tow, R.drawable.three, R.drawable.one};
     int currentPageCunter = 0;
     MenuItem menuItem;
     TextView badgeCounter;
     int pendingNotfication = 12;
     ArrayList<Pojo> arrayList;
     GridView gridView;
+    /*Ida ne kategoria mosu ba pagina home*/
+    String[] nameList = {"Komputador", "Laptop","Telemovel","Tips & Trick"};
+    int[] gridImages = {R.drawable.ic_120,R.drawable.ic_130,R.drawable.ic_150,R.drawable.ic_140};
     TextView textView;
     AdapaterGridView adapaterGridView;
     SubMenu subMenu;
@@ -52,18 +57,12 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
     ArrayList<ContentModel> dataItem;
     View dialog1;
     AutoCompleteTextView autoCompleteTextView1;
-    String[] nameList = {"Dili Klinika Becora", "Dili Klinika Bidau","Dili Klinika Fatuhada", "Baucau",
-            "Viqueque", "Ainaro", "Suai", "Manatuto", "Liquica","Oecusse","Atauro", "Same",};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        autoCompleteTextView1 = (AutoCompleteTextView) findViewById(R.id.autoCompleteTextView);
-        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, nameList);
-        autoCompleteTextView1.setThreshold(1);
-        autoCompleteTextView1.setAdapter(adapter);
 
         final SwipeRefreshLayout refreshLayout = findViewById(R.id.refresh_layout);
         refreshLayout.setColorSchemeColors(Color.BLUE);
@@ -73,14 +72,6 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
             public void onRefresh() {
                 Toast.makeText(HomeActivity.this, "Atualiza fali", Toast.LENGTH_SHORT).show();
                 refreshLayout.setRefreshing(false);
-            }
-        });
-
-        TextView see_all = findViewById(R.id.see_all);
-
-        see_all.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) { startActivity(new Intent(HomeActivity.this, CategoryActivity.class));
             }
         });
 
@@ -100,22 +91,37 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
         recycleViewAdapter = new ContentRecycleView(dataItem);
         recyclerView.setAdapter(recycleViewAdapter);
 
-        gridView = findViewById(R.id.grid_list);
+//        gridView = findViewById(R.id.gridview);
 
-        gridItemShow();
+//        gridItemShow();
+//
+//        adapaterGridView = new AdapaterGridView(this, arrayList);
+//        gridView.setAdapter(adapaterGridView);
+//    }
+//
+//        private void gridItemShow() {
+//        arrayList = new ArrayList<Pojo>();
+//
+//        arrayList.add(new Pojo("Komputador", "Diskontu Konsulta nehan...", R.drawable.ic_120));
+//        arrayList.add(new Pojo("Laptop", "Diskontu Konsulta nehan...", R.drawable.ic_130));
+//        arrayList.add(new Pojo("Telemovel", "Diskontu Konsulta nehan...", R.drawable.ic_150));
+//        arrayList.add(new Pojo("Tips & Tricks", "Diskontu Konsulta nehan...", R.drawable.ic_140));
 
-        adapaterGridView = new AdapaterGridView(this, arrayList);
-        gridView.setAdapter(adapaterGridView);
-    }
+        //finding listview
+        gridView = findViewById(R.id.gridview);
 
-    private void gridItemShow() {
-        arrayList = new ArrayList<Pojo>();
+        CustomAdapter customAdapter = new CustomAdapter();
+        gridView.setAdapter(customAdapter);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(),Grid_itemActivity.class);
+                intent.putExtra("name",nameList[i]);
+                intent.putExtra("image",gridImages[i]);
+                startActivity(intent);
 
-        arrayList.add(new Pojo("Fokit Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_12));
-        arrayList.add(new Pojo("Hamos Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_13));
-        arrayList.add(new Pojo("Aumenta Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_14));
-        arrayList.add(new Pojo("Solda Nehan", "Diskontu Konsulta nehan...", R.drawable.ic_15));
-
+            }
+        });
 
         overridePendingTransition(0,0);
 
@@ -148,7 +154,7 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
     BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
     Menu menu = bottomNavigationView.getMenu();
     MenuItem menuItem = menu.getItem(0);
-        menuItem.setChecked( true );
+    menuItem.setChecked( true );
 
         bottomNavigationView.setOnNavigationItemSelectedListener( new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
@@ -157,13 +163,13 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
                 case R.id.ic_home:
                     break;
 
-                case R.id.ic_history:
-                    Intent intent1 = new Intent(HomeActivity.this, History.class);
+                case R.id.ic_blog:
+                    Intent intent1 = new Intent(HomeActivity.this, Blog.class);
                     startActivity( intent1 );
                     break;
 
-                case R.id.ic_calendar:
-                    Intent intent2 = new Intent(HomeActivity.this, MedicineRecord.class);
+                case R.id.ic_favoritu:
+                    Intent intent2 = new Intent(HomeActivity.this, Favoritu.class);
                     startActivity( intent2 );
                     break;
 
@@ -190,5 +196,33 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
             badgeCounter.setText(String.valueOf(pendingNotfication));
         }
         return super.onCreateOptionsMenu(menu);
+    }
+
+    public class CustomAdapter extends BaseAdapter {
+        @Override
+        public int getCount() {
+            return gridImages.length;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return null;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View view1 = getLayoutInflater().inflate(R.layout.activity_grid_item,null);
+            TextView name = view1.findViewById(R.id.griddata);
+            ImageView image = view1.findViewById(R.id.imageView);
+
+            name.setText(nameList[position]);
+            image.setImageResource(gridImages[position]);
+            return view1;
+        }
     }
 }

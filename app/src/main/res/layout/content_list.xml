@@ -11,7 +11,7 @@
         app:cardCornerRadius="5dp"
         app:cardElevation="2dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="250dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             android:adjustViewBounds="true"
             android:scaleType="centerCrop"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="180dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"

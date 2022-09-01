@@ -20,7 +20,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.diary.klinikapp.HomeActivity;
 import com.diary.klinikapp.R;
 import com.diary.klinikapp.Signin;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -32,10 +31,24 @@ public class Profile extends AppCompatActivity {
     RecyclerView.LayoutManager recycleViewLayoutManager;
     ArrayList<ItemModel> data;
 
-    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_profile );
+
+//        {
+//            if (Build.VERSION.SDK_INT < 31) {
+//                getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                        WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//            } else {
+//                View decorView = getWindow().getDecorView();
+//                int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+//                getWindow().setStatusBarColor(getResources().getColor(R.color.white));
+//                decorView.setSystemUiVisibility(uiOptions);
+//            }
+//        }
+
+//        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+//        getSupportActionBar().setCustomView(R.layout.profile_toolbar);
 
         recyclerView = findViewById(R.id.recycleView);
         recyclerView.setHasFixedSize(true);
@@ -67,20 +80,24 @@ public class Profile extends AppCompatActivity {
 
         overridePendingTransition(0,0);
 
-        getSupportActionBar().setTitle("Perfil");
+//        getSupportActionBar().setTitle("Perfil");
+
+//        getSupportActionBar().setElevation(0);
+//        getSupportActionBar().setBackgroundDrawable(
+//                new ColorDrawable(Color.parseColor("#00BCD4")));
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
         /*TextView title = (TextView) findViewById(R.id.activityTitle2);*/
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById( R.id.bottomNavView_Bar );
+        com.google.android.material.bottomnavigation.BottomNavigationView bottomNavigationView = (com.google.android.material.bottomnavigation.BottomNavigationView) findViewById( R.id.bottomNavView_Bar );
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(3);
         menuItem.setChecked( true );
 
-        bottomNavigationView.setOnNavigationItemSelectedListener( new BottomNavigationView.OnNavigationItemSelectedListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener( new com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
@@ -89,17 +106,18 @@ public class Profile extends AppCompatActivity {
                         startActivity( intent0 );
                         break;
 
-                    case R.id.ic_history:
-                        Intent intent1 = new Intent(Profile.this, History.class);
+                    case R.id.ic_blog:
+                        Intent intent1 = new Intent( Profile.this, Blog.class );
                         startActivity( intent1 );
                         break;
 
-                    case R.id.ic_calendar:
-                        Intent intent2 = new Intent(Profile.this, MedicineRecord.class);
+                    case R.id.ic_favoritu:
+                        Intent intent2 = new Intent(Profile.this, Favoritu.class);
                         startActivity( intent2 );
                         break;
 
                     case  R.id.ic_profile:
+
                         break;
 
                 }
@@ -108,4 +126,5 @@ public class Profile extends AppCompatActivity {
             }
         } );
     }
+
 }

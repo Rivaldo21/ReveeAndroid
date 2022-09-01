@@ -23,21 +23,22 @@
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <RelativeLayout
+        android:id="@+id/bottomBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottomBar"
         android:layout_alignParentBottom="true">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavView_Bar"
             android:layout_width="match_parent"
-            android:layout_margin="15dp"
             app:elevation="3dp"
+            app:itemTextColor="@color/black"
+            app:itemIconSize="22dp"
+            app:itemTextAppearanceInactive="@style/Widget.BottomNavigationView"
             android:layout_height="?attr/actionBarSize"
             app:labelVisibilityMode="labeled"
             android:background="@drawable/background_button"
             app:menu="@menu/button_navigation">
-
         </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     </RelativeLayout>

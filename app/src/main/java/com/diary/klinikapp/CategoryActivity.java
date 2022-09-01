@@ -22,7 +22,7 @@ public class CategoryActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Kategoria Tratamentu");
 
-        gridView = findViewById(R.id.grid_list);
+//        gridView = findViewById(R.id.grid_list);
 
         gridItemShow();
 
@@ -33,10 +33,10 @@ public class CategoryActivity extends AppCompatActivity {
     private void gridItemShow() {
         arrayList = new ArrayList<Pojo>();
 
-        arrayList.add(new Pojo("Losu Nehan", "", R.drawable.ic_12));
-        arrayList.add(new Pojo("Taka Nehan", "", R.drawable.ic_13));
-        arrayList.add(new Pojo("Hamos Nehan", "", R.drawable.ic_14));
-        arrayList.add(new Pojo("Solda Nehan", "", R.drawable.ic_15));
+        arrayList.add(new Pojo("Komputador", "", R.drawable.ic_12));
+        arrayList.add(new Pojo("Laptop", "", R.drawable.ic_13));
+        arrayList.add(new Pojo("Telemovel", "", R.drawable.ic_14));
+        arrayList.add(new Pojo("Tips & Tricks", "", R.drawable.ic_15));
         arrayList.add(new Pojo("Scaling Nehan", "", R.drawable.ic_15));
         arrayList.add(new Pojo("Bleaching", "", R.drawable.ic_15));
         arrayList.add(new Pojo("Filling", "", R.drawable.ic_15));

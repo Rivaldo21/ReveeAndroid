@@ -9,11 +9,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.diary.klinikapp.ContentModel;
 import com.diary.klinikapp.R;
+import com.diary.klinikapp.ContentModel;
 
 import java.util.ArrayList;
-
+/*Show To Home*/
 public class ContentRecycleView extends RecyclerView.Adapter<ContentRecycleView.mViewHolder> {
 
    private ArrayList<ContentModel> dataItem;
