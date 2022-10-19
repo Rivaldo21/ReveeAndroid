@@ -1,9 +1,12 @@
 package com.diary.klinikapp;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
@@ -12,10 +15,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.BaseAdapter;
+import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -56,8 +61,8 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
     RecyclerView.LayoutManager layoutManager;
     ArrayList<ContentModel> dataItem;
     View dialog1;
+    Toolbar toolbarTop;
     AutoCompleteTextView autoCompleteTextView1;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

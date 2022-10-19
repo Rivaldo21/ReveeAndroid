@@ -84,7 +84,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="210dp"
             android:layout_width="300dp"
-            android:layout_height="130dp">
+            android:layout_height="150dp">
 
             <include layout="@layout/slide_resource" />
 

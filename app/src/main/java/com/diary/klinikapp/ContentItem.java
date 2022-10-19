@@ -9,15 +9,15 @@ public class ContentItem {
     };
 
     static String[] judul = {
-             "Sentru Ajuda", "Konaba Ami", "Metode Pagamentu", "Informasaun Klinika", "Termu & Kondisaun","Termu & Kondisaun",
+            "Samsung S20", "PC MSI Gaming", "Metode Pagamentu", "Informasaun Klinika", "Termu & Kondisaun","Termu & Kondisaun",
             "Termu & Kondisaun","Termu & Kondisaun","Termu & Kondisaun","Termu & Kondisaun","Termu & Kondisaun","Termu & Kondisaun",
 
     };
 
     static String[] tahun = {
-            String.valueOf(R.string.slide_1_title), String.valueOf(R.string.app_name), String.valueOf(R.string.app_name), "Mensajen",
-            "Informasaun", "Sentru Ajuda",
-            "Horario Klinika","Horario Klinika","Horario Klinika","Horario Klinika","Horario Klinika","Horario Klinika",
-            "Horario Klinika",
+            "New Samsung 2022.....","PC for gaming.....","New Samsung 2022.....","Lenovo UFO.....",
+            "UI & UX Design.....", "MSI 2T99.....",
+            "HP Pavilon.....","MAC OS.....","HTC 167T.....","Realme 8S.....","IOS 14.....","Dell Insparion.....",
+            "Dell Insparion.....",
     };
 }
