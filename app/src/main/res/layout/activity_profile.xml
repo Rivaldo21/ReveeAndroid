@@ -7,16 +7,31 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_centerHorizontal="true"
             android:layout_width="320dp"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             app:cardElevation="10dp"
             app:cardCornerRadius="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/profile_background">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
 
             <com.mikhaellopez.circularimageview.CircularImageView
                 android:id="@+id/profileR"
@@ -27,29 +42,26 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"/>
 
-            <TextView
-                android:id="@+id/username"
-                android:layout_marginLeft="120dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20sp"
-                android:padding="5dp"
-                android:text="Melania Amaral"
-                android:fontFamily="@font/poppinsbold"
-                android:textColor="@color/black"
-                android:textSize="17sp"/>
-
-            <LinearLayout
-                android:layout_marginLeft="124dp"
-                android:layout_marginTop="50dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/username">
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/profileR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20sp"
+                    android:padding="5dp"
+                    android:text="Nelia Fernandes"
+                    android:fontFamily="@font/poppinsbold"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"/>
 
                 <TextView
                     android:id="@+id/numregist"
+                    android:layout_below="@id/username"
+                    android:layout_toRightOf="@id/profileR"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
                     android:fontFamily="@font/poppins"
                     android:text="Pontos: " />
 
@@ -57,39 +69,28 @@
                     android:id="@+id/nrejistu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/numregist"
+                    android:layout_below="@id/username"
                     android:fontFamily="@font/poppins"
-                    android:layout_alignRight="@id/numregist"
                     android:text="1000"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="100dp"
-                android:background="#EAEAEA" />
+            </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:id="@+id/topBar">-->
-
-<!--            <com.google.android.material.appbar.AppBarLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:background="@color/white">-->
-<!--            </com.google.android.material.appbar.AppBarLayout>-->
-
-<!--        </RelativeLayout>-->
-
-        <ScrollView
-            android:id="@+id/scrollView"
+        <View
             android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dp"
+            android:background="#EAEAEA" />
+
+        <RelativeLayout
+            android:id="@+id/lRecycle"
+            android:layout_below="@id/cardView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <!--RecycleView-->
@@ -98,17 +99,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="170dp"
                 android:layout_marginRight="10dp" />
 
-        </ScrollView>
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/tvView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/scrollView"
+            android:layout_below="@id/lRecycle"
             android:layout_centerHorizontal="true"
             android:layout_marginStart="20dp"
             android:layout_marginTop="50dp"
@@ -119,6 +120,10 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#EF0000" />
+
+         </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
 
         <RelativeLayout
             android:layout_width="match_parent"
