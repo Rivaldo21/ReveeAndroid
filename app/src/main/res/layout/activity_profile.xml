@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20sp"
                     android:padding="5dp"
-                    android:text="Nelia Fernandes"
+                    android:text="Melania Amaral"
                     android:fontFamily="@font/poppinsbold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>
@@ -84,11 +84,12 @@
             android:layout_width="match_parent"
             android:layout_height="4dp"
             android:layout_gravity="center"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="170dp"
             android:background="#EAEAEA" />
 
         <RelativeLayout
             android:id="@+id/lRecycle"
+            android:layout_marginTop="50dp"
             android:layout_below="@id/cardView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -99,7 +100,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp" />
 

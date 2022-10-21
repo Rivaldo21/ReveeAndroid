@@ -2,7 +2,7 @@
 <resources>
     <color name="Reveeoriginal">#00BCD4</color>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="colorPrimaryDark">#000</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="purple_500">#065C54</color>
     <color name="purple_700">#065C54</color>
     <color name="teal_200">#FFC107</color>

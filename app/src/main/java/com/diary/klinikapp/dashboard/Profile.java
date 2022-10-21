@@ -1,10 +1,13 @@
 package com.diary.klinikapp.dashboard;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,20 +38,17 @@ public class Profile extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_profile );
 
-//        {
-//            if (Build.VERSION.SDK_INT < 31) {
-//                getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                        WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//            } else {
-//                View decorView = getWindow().getDecorView();
-//                int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-//                getWindow().setStatusBarColor(getResources().getColor(R.color.white));
-//                decorView.setSystemUiVisibility(uiOptions);
-//            }
-//        }
+        {
+            if (Build.VERSION.SDK_INT >= 21) {
+                Window window = this.getWindow();
+                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+                window.setStatusBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
+            }
+        }
 
-//        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-//        getSupportActionBar().setCustomView(R.layout.profile_toolbar);
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.profile_toolbar);
 
         recyclerView = findViewById(R.id.recycleView);
         recyclerView.setHasFixedSize(true);

@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -15,10 +18,22 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Blog extends AppCompatActivity {
 
+    WebView webView;
+    ProgressBar bar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog);
+
+        webView = (WebView) findViewById(R.id.webrevee);
+        bar = (ProgressBar) findViewById(R.id.progressBarStyle);
+        webView.setWebViewClient(new myWebclient());
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("https://revee.site/");
+
+        WebView myWebView = (WebView) findViewById(R.id.webrevee);
+        myWebView.loadUrl("https://wfour.tl/");
 
         overridePendingTransition(0,0);
 
@@ -52,11 +67,12 @@ public class Blog extends AppCompatActivity {
                         Intent intent3 = new Intent(Blog.this, Profile.class);
                         startActivity( intent3 );
                         break;
-
                 }
 
                 return false;
             }
         } );
+    }
+    private class myWebclient extends WebViewClient {
     }
 }
