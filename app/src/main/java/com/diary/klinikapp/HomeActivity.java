@@ -97,21 +97,21 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
         recycleViewAdapter = new ContentRecycleView(dataItem);
         recyclerView.setAdapter(recycleViewAdapter);
 
-//        gridView = findViewById(R.id.gridview);
+/*        gridView = findViewById(R.id.gridview);
 
-//        gridItemShow();
-//
-//        adapaterGridView = new AdapaterGridView(this, arrayList);
-//        gridView.setAdapter(adapaterGridView);
-//    }
-//
-//        private void gridItemShow() {
-//        arrayList = new ArrayList<Pojo>();
-//
-//        arrayList.add(new Pojo("Komputador", "Diskontu Konsulta nehan...", R.drawable.ic_120));
-//        arrayList.add(new Pojo("Laptop", "Diskontu Konsulta nehan...", R.drawable.ic_130));
-//        arrayList.add(new Pojo("Telemovel", "Diskontu Konsulta nehan...", R.drawable.ic_150));
-//        arrayList.add(new Pojo("Tips & Tricks", "Diskontu Konsulta nehan...", R.drawable.ic_140));
+        gridItemShow();
+
+        adapaterGridView = new AdapaterGridView(this, arrayList);
+        gridView.setAdapter(adapaterGridView);
+    }
+
+        private void gridItemShow() {
+        arrayList = new ArrayList<Pojo>();
+
+        arrayList.add(new Pojo("Komputador", "Diskontu Konsulta nehan...", R.drawable.ic_120));
+        arrayList.add(new Pojo("Laptop", "Diskontu Konsulta nehan...", R.drawable.ic_130));
+        arrayList.add(new Pojo("Telemovel", "Diskontu Konsulta nehan...", R.drawable.ic_150));
+        arrayList.add(new Pojo("Tips & Tricks", "Diskontu Konsulta nehan...", R.drawable.ic_140));*/
 
         //finding listview
         gridView = findViewById(R.id.gridview);
