@@ -32,6 +32,8 @@ public class Blog extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.loadUrl("https://wfour.tl/");
 
+//        Nelia
+
         WebView myWebView = (WebView) findViewById(R.id.webrevee);
         myWebView.loadUrl("https://www.figma.com/community");
 
