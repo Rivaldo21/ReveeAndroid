@@ -39,7 +39,7 @@ public class SliderAdapter extends PagerAdapter {
         ImageView imageView = myImageLayout.findViewById(R.id.imageView);
 
         if (Build.VERSION.SDK_INT >=Build.VERSION_CODES.LOLLIPOP) {
-        imageView.setImageDrawable(context.getDrawable(images[position]));
+        /*imageView.setImageDrawable(context.getDrawable(images[position]));*/
 
         }else {
 

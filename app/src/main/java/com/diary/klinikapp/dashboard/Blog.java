@@ -27,13 +27,13 @@ public class Blog extends AppCompatActivity {
         setContentView(R.layout.activity_blog);
 
         webView = (WebView) findViewById(R.id.webrevee);
-        bar = (ProgressBar) findViewById(R.id.progressBarStyle);
+        /*bar = (ProgressBar) findViewById(R.id.progressBarStyle);*/
         webView.setWebViewClient(new myWebclient());
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://revee.site/");
+        webView.loadUrl("https://wfour.tl/");
 
         WebView myWebView = (WebView) findViewById(R.id.webrevee);
-        myWebView.loadUrl("https://wfour.tl/");
+        myWebView.loadUrl("https://www.figma.com/community");
 
         overridePendingTransition(0,0);
 
