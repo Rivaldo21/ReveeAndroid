@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.diary.klinikapp.ForumActivity;
 import com.diary.klinikapp.R;
 import com.diary.klinikapp.HomeActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -63,9 +64,14 @@ public class Blog extends AppCompatActivity {
                         startActivity( intent2 );
                         break;
 
-                    case  R.id.ic_profile:
-                        Intent intent3 = new Intent(Blog.this, Profile.class);
+                    case R.id.ic_forum:
+                        Intent intent3 = new Intent(Blog.this, ForumActivity.class);
                         startActivity( intent3 );
+                        break;
+
+                    case  R.id.ic_profile:
+                        Intent intent4 = new Intent(Blog.this, Profile.class);
+                        startActivity( intent4 );
                         break;
                 }
 

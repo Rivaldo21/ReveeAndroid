@@ -1,6 +1,7 @@
 package com.diary.klinikapp.dashboard;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -20,6 +21,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.diary.klinikapp.ForumActivity;
 import com.diary.klinikapp.HomeActivity;
 import com.diary.klinikapp.R;
 import com.diary.klinikapp.Signin;
@@ -39,11 +41,18 @@ public class Profile extends AppCompatActivity {
         setContentView( R.layout.activity_profile );
 
         {
-            if (Build.VERSION.SDK_INT >= 21) {
-                Window window = this.getWindow();
-                window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-                window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-                window.setStatusBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                View decor = getWindow().getDecorView();
+                boolean shouldChangeStatusBarTintToDark = true;
+                getWindow().setStatusBarColor(Color.WHITE);
+                if (shouldChangeStatusBarTintToDark) {
+                    decor.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+                } else {
+                    // We want to change tint color to white again.
+                    // You can also record the flags in advance so that you can turn UI back completely if
+                    // you have set other flags before, such as translucent or full screen.
+                    decor.setSystemUiVisibility(0);
+                }
             }
         }
 
@@ -94,7 +103,7 @@ public class Profile extends AppCompatActivity {
         com.google.android.material.bottomnavigation.BottomNavigationView bottomNavigationView = (com.google.android.material.bottomnavigation.BottomNavigationView) findViewById( R.id.bottomNavView_Bar );
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(3);
+        MenuItem menuItem = menu.getItem(4);
         menuItem.setChecked( true );
 
         bottomNavigationView.setOnNavigationItemSelectedListener( new com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -111,13 +120,17 @@ public class Profile extends AppCompatActivity {
                         startActivity( intent1 );
                         break;
 
-                    case R.id.ic_favoritu:
-                        Intent intent2 = new Intent(Profile.this, Favoritu.class);
+                    case R.id.ic_forum:
+                        Intent intent2 = new Intent(Profile.this, ForumActivity.class);
                         startActivity( intent2 );
                         break;
 
-                    case  R.id.ic_profile:
+                    case R.id.ic_favoritu:
+                        Intent intent3 = new Intent(Profile.this, Favoritu.class);
+                        startActivity( intent3 );
+                        break;
 
+                    case  R.id.ic_profile:
                         break;
 
                 }
