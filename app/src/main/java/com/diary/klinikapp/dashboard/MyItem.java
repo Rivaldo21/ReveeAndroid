@@ -3,6 +3,7 @@ package com.diary.klinikapp.dashboard;
 import com.diary.klinikapp.R;
 
 /*RecycleView Show to profile*/
+
 public class MyItem {
 
     static int[] iconlist = {
@@ -10,7 +11,7 @@ public class MyItem {
     };
 
     static String[] Headline = {
-            "Kontributor", "Informasaun", "Sentru Ajuda", "Termu & Kondisaun", "WhatsApp", "Facebook", "Konaba Revee"
+            "Kontribui", "Mitra Revee", "Sentru Ajuda", "Termu & Kondisaun", "WhatsApp", "Facebook", "Konaba Revee"
     };
 
     static String[] Subheadline = {
