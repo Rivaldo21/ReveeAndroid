@@ -20,6 +20,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.diary.klinikapp.ForumActivity;
 import com.diary.klinikapp.HomeActivity;
 import com.diary.klinikapp.R;
 import com.diary.klinikapp.Signin;
@@ -94,7 +95,7 @@ public class Profile extends AppCompatActivity {
         com.google.android.material.bottomnavigation.BottomNavigationView bottomNavigationView = (com.google.android.material.bottomnavigation.BottomNavigationView) findViewById( R.id.bottomNavView_Bar );
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(3);
+        MenuItem menuItem = menu.getItem(4);
         menuItem.setChecked( true );
 
         bottomNavigationView.setOnNavigationItemSelectedListener( new com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -111,13 +112,17 @@ public class Profile extends AppCompatActivity {
                         startActivity( intent1 );
                         break;
 
-                    case R.id.ic_favoritu:
-                        Intent intent2 = new Intent(Profile.this, Favoritu.class);
+                    case R.id.ic_forum:
+                        Intent intent2 = new Intent(Profile.this, ForumActivity.class);
                         startActivity( intent2 );
                         break;
 
-                    case  R.id.ic_profile:
+                    case R.id.ic_favoritu:
+                        Intent intent3 = new Intent(Profile.this, Favoritu.class);
+                        startActivity( intent3 );
+                        break;
 
+                    case  R.id.ic_profile:
                         break;
 
                 }

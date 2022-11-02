@@ -174,18 +174,24 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
                     startActivity( intent1 );
                     break;
 
-                case R.id.ic_favoritu:
-                    Intent intent2 = new Intent(HomeActivity.this, Favoritu.class);
+                case R.id.ic_forum:
+                    Intent intent2 = new Intent(HomeActivity.this, ForumActivity.class);
                     startActivity( intent2 );
                     break;
 
-                case R.id.ic_profile:
-                    Intent intent3 = new Intent(HomeActivity.this, Profile.class);
+                case R.id.ic_favoritu:
+                    Intent intent3 = new Intent(HomeActivity.this, Favoritu.class);
                     startActivity( intent3 );
+                    break;
+
+                case R.id.ic_profile:
+                    Intent intent4 = new Intent(HomeActivity.this, Profile.class);
+                    startActivity( intent4 );
                     break;
             }
             return false;
         }
+
         } );
     }
     @Override
