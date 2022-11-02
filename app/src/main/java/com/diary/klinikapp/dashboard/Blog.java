@@ -30,10 +30,10 @@ public class Blog extends AppCompatActivity {
         /*bar = (ProgressBar) findViewById(R.id.progressBarStyle);*/
         webView.setWebViewClient(new myWebclient());
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("https://wfour.tl/");
+        webView.loadUrl("https://revee.site/");
 
         WebView myWebView = (WebView) findViewById(R.id.webrevee);
-        myWebView.loadUrl("https://www.figma.com/community");
+        myWebView.loadUrl("https://revee.site/");
 
         overridePendingTransition(0,0);
 
