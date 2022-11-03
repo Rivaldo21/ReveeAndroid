@@ -1,22 +1,17 @@
 package com.diary.klinikapp;
 
-import static android.content.ContentValues.TAG;
-
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.AutoCompleteTextView;
 import android.widget.BaseAdapter;
-import android.widget.FrameLayout;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -24,15 +19,16 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewpager.widget.ViewPager;
 
+import com.diary.klinikapp.dashboard.Blog;
 import com.diary.klinikapp.dashboard.BottomNavigationViewHelper;
 import com.diary.klinikapp.dashboard.ContentRecycleView;
-import com.diary.klinikapp.dashboard.Blog;
 import com.diary.klinikapp.dashboard.Favoritu;
 import com.diary.klinikapp.dashboard.Profile;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -69,6 +65,9 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.home_toolbar);
 
         final SwipeRefreshLayout refreshLayout = findViewById(R.id.refresh_layout);
         refreshLayout.setColorSchemeColors(Color.BLUE);
@@ -169,13 +168,13 @@ public class HomeActivity<AdapterRecyclerView> extends AppCompatActivity {
                 case R.id.ic_home:
                     break;
 
-                case R.id.ic_blog:
-                    Intent intent1 = new Intent(HomeActivity.this, Blog.class);
+                case R.id.ic_forum:
+                    Intent intent1 = new Intent(HomeActivity.this, ForumActivity.class);
                     startActivity( intent1 );
                     break;
 
-                case R.id.ic_forum:
-                    Intent intent2 = new Intent(HomeActivity.this, ForumActivity.class);
+                case R.id.ic_blog:
+                    Intent intent2 = new Intent(HomeActivity.this, Blog.class);
                     startActivity( intent2 );
                     break;
 

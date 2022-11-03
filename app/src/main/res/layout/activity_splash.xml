@@ -10,19 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/logogif"
-            android:orientation="horizontal"
-            android:layout_centerInParent="true"
+        <pl.droidsonroids.gif.GifImageView
+            android:src="@drawable/ic_splash"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <pl.droidsonroids.gif.GifImageView
-                android:src="@drawable/ic_splash"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-        </LinearLayout>
+            android:layout_height="match_parent"/>
 
     </RelativeLayout>
 

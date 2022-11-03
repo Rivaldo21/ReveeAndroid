@@ -5,13 +5,13 @@
         android:title="Varanda"
         android:icon="@drawable/home_selector"/>
 
-    <item android:id="@+id/ic_blog"
-        android:title="Blog"
-        android:icon="@drawable/blog_selector"/>
-
     <item android:id="@+id/ic_forum"
         android:title="Forum"
         android:icon="@drawable/forum_selector"/>
+
+    <item android:id="@+id/ic_blog"
+        android:title="Revee"
+        android:icon="@drawable/blog_selector"/>
 
     <item android:id="@+id/ic_favoritu"
         android:title="Favoritu"

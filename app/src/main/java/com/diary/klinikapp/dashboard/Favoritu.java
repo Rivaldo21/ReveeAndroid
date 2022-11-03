@@ -11,8 +11,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.diary.klinikapp.ForumActivity;
-import com.diary.klinikapp.R;
 import com.diary.klinikapp.HomeActivity;
+import com.diary.klinikapp.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Favoritu extends AppCompatActivity {
@@ -42,13 +42,13 @@ public class Favoritu extends AppCompatActivity {
                         startActivity( intent0 );
                         break;
 
-                    case R.id.ic_blog:
-                        Intent intent1 = new Intent( Favoritu.this, Blog.class );
+                    case R.id.ic_forum:
+                        Intent intent1 = new Intent( Favoritu.this, ForumActivity.class );
                         startActivity( intent1 );
                         break;
 
-                    case R.id.ic_forum:
-                        Intent intent2 = new Intent( Favoritu.this, ForumActivity.class );
+                    case R.id.ic_blog:
+                        Intent intent2 = new Intent( Favoritu.this, Blog.class );
                         startActivity( intent2 );
                         break;
 

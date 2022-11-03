@@ -1,13 +1,13 @@
 package com.diary.klinikapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.diary.klinikapp.dashboard.Blog;
 import com.diary.klinikapp.dashboard.BottomNavigationViewHelper;
@@ -28,7 +28,7 @@ public class ForumActivity extends AppCompatActivity {
         com.google.android.material.bottomnavigation.BottomNavigationView bottomNavigationView = (com.google.android.material.bottomnavigation.BottomNavigationView) findViewById( R.id.bottomNavView_Bar );
         BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
         Menu menu = bottomNavigationView.getMenu();
-        MenuItem menuItem = menu.getItem(2);
+        MenuItem menuItem = menu.getItem(1);
         menuItem.setChecked( true );
 
         bottomNavigationView.setOnNavigationItemSelectedListener( new com.google.android.material.bottomnavigation.BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -40,12 +40,12 @@ public class ForumActivity extends AppCompatActivity {
                         startActivity( intent0 );
                         break;
 
-                    case R.id.ic_blog:
-                        Intent intent1 = new Intent( ForumActivity.this, Blog.class );
-                        startActivity( intent1 );
+                    case R.id.ic_forum:
                         break;
 
-                    case R.id.ic_forum:
+                    case R.id.ic_blog:
+                        Intent intent2 = new Intent( ForumActivity.this, Blog.class );
+                        startActivity( intent2 );
                         break;
 
                     case R.id.ic_favoritu:

@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -115,13 +113,13 @@ public class Profile extends AppCompatActivity {
                         startActivity( intent0 );
                         break;
 
-                    case R.id.ic_blog:
-                        Intent intent1 = new Intent( Profile.this, Blog.class );
-                        startActivity( intent1 );
+                    case R.id.ic_forum:
+                        Intent intent1 = new Intent(Profile.this, ForumActivity.class);
+                        startActivity( intent1);
                         break;
 
-                    case R.id.ic_forum:
-                        Intent intent2 = new Intent(Profile.this, ForumActivity.class);
+                    case R.id.ic_blog:
+                        Intent intent2 = new Intent( Profile.this, Blog.class );
                         startActivity( intent2 );
                         break;
 

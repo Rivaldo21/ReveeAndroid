@@ -2,35 +2,34 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:ignore="UselessParent">
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:ignore="UselessParent">-->
 
-        <RelativeLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="WebViewLayout">
+<!--        <RelativeLayout-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:ignore="WebViewLayout">-->
 
-            <WebView
-                android:id="@+id/webrevee"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+<!--            <WebView-->
+<!--                android:id="@+id/webrevee"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"/>-->
 
-<!--            <ProgressBar
-                android:id="@+id/progressBarStyle"
-                android:indeterminateDrawable="@drawable/ic_progress"
-                android:layout_centerInParent="true"
-                android:layout_width="350dp"
-                android:layout_height="match_parent"/>-->
+<!--            <ProgressBar-->
+<!--                android:id="@+id/progressBarStyle"-->
+<!--                android:indeterminateDrawable="@drawable/ic_progress"-->
+<!--                android:layout_centerInParent="true"-->
+<!--                android:layout_width="350dp"-->
+<!--                android:layout_height="match_parent"/>-->
 
-        </RelativeLayout>
+<!--        </RelativeLayout>-->
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -42,13 +41,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/bottomBar"
-            android:layout_alignParentBottom="true">
+            android:id="@+id/bottomBar">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomNavView_Bar"
                 android:layout_width="match_parent"
                 app:elevation="3dp"
+                android:layout_alignParentBottom="true"
                 app:itemTextColor="@color/black"
                 app:itemIconSize="22dp"
                 app:itemTextAppearanceInactive="@style/Widget.BottomNavigationView"
@@ -59,7 +58,5 @@
             </com.google.android.material.bottomnavigation.BottomNavigationView>
 
         </RelativeLayout>
-
-    </RelativeLayout>
 
 </LinearLayout>
