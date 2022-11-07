@@ -35,8 +35,8 @@
 
             <com.mikhaellopez.circularimageview.CircularImageView
                 android:id="@+id/profileR"
+                android:elevation="2dp"
                 android:src="@drawable/ic_dov"
-                android:elevation="5dp"
                 android:layout_marginTop="15dp"
                 android:layout_marginStart="30dp"
                 android:layout_width="70dp"
@@ -49,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20sp"
-                    android:text="Melania Amaral"
+                    android:text="Rafaella Mendes"
                     android:fontFamily="@font/poppinsbold"
                     android:textColor="@color/black"
                     android:textSize="17sp"/>

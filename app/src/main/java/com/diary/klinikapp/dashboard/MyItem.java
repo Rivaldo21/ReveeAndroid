@@ -7,7 +7,7 @@ import com.diary.klinikapp.R;
 public class MyItem {
 
     static int[] iconlist = {
-            R.drawable.ic_pagamentu, R.drawable.ic_infoklinika, R.drawable.ic_sentruajuda, R.drawable.ic_termukondisaun, R.drawable.ic_konaba , R.drawable.ic_konaba , R.drawable.ic_konaba
+            R.drawable.ic_pagamentu, R.drawable.ic_pagamentu, R.drawable.ic_pagamentu, R.drawable.ic_pagamentu, R.drawable.ic_pagamentu , R.drawable.ic_pagamentu , R.drawable.ic_pagamentu
     };
 
     static String[] Headline = {
