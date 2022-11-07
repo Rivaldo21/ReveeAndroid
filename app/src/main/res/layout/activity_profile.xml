@@ -65,7 +65,7 @@
                     android:layout_height="wrap_content"/>
 
                 <TextView
-                    android:id="@+id/editProfile"
+                    android:id="@+id/edtProfile"
                     android:layout_below="@id/moneytize"
                     android:layout_toRightOf="@id/profileR"
                     android:layout_width="wrap_content"

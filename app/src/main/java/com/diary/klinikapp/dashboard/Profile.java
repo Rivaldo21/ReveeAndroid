@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.diary.klinikapp.EditprofileActivity;
 import com.diary.klinikapp.ForumActivity;
 import com.diary.klinikapp.HomeActivity;
 import com.diary.klinikapp.R;
@@ -37,6 +38,14 @@ public class Profile extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_profile );
+
+        TextView tvShow = findViewById(R.id.edtProfile);
+
+        tvShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(Profile.this, EditprofileActivity.class));
+            }
+        });
 
         {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
